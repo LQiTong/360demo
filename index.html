@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>360动画</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/360css.css"/>
+</head>
+<body>
+<div id="pageFor-360">
+    <div class="section first">
+        <div class="logo"></div>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section second">
+        <div class="shield">
+            <img src="images/shield_1.png" alt=""/>
+            <img src="images/shield_2.png" alt=""/>
+            <img src="images/shield_3.png" alt=""/>
+            <img src="images/shield_4.png" alt=""/>
+            <img src="images/shield_5.png" alt=""/>
+            <img src="images/shield_6.png" alt=""/>
+            <img src="images/shield_7.png" alt=""/>
+            <img src="images/shield_8.png" alt=""/>
+            <img src="images/shield_9.png" alt=""/>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section third">
+        <div class="info"></div>
+        <div class="ellipse">
+            <div class="rocket"></div>
+        </div>
+    </div>
+    <div class="section fourth">
+        <div class="search">
+            <div class="box"></div>
+            <div class="text"></div>
+            <div class="content"></div>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section fifth">
+        <div class="info"></div>
+        <div class="content">
+            <div class="tool"></div>
+            <!-- 边框线 -->
+            <div class="lines lineleft"></div>
+            <div class="lines lineright"></div>
+            <div class="lines linetop"></div>
+            <div class="lines linebottom"></div>
+            <!-- 工具栏 -->
+            <div class="toolbar">
+                <p></p>
+            </div>
+            <!-- 特别line -->
+            <div class="lineextra"></div>
+            <!-- 其它 -->
+            <div class="extra"></div>
+
+        </div>
+    </div>
+    <div class="section sixth">
+        <div class="info"><a href="http://www.baidu.com">百度首页</a></div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#pageFor-360').fullpage({
+            sectionsColor: ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6','white'],
+            afterLoad: function (anchorLink, index) {
+                /*1.先清除其它的类名current*/
+                $(".section").removeClass("current");
+                /*2.给当前标签添加类名currrent*/
+                setTimeout(function () {
+                    $(".section").eq(index-1).addClass("current");
+                },200);
+            }
+        });
+    });
+</script>
+</body>
+</html>

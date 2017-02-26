@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    overflow: hidden;
+}
+
+/*��һ��*/
+.first {
+    padding: 80px;
+}
+
+.first .logo {
+    width: 251px;
+    height: 186px;
+    background: url("../images/logo.png");
+    margin: 0 auto 30px;
+}
+
+.first .text {
+    text-align: center;
+}
+
+.first .text > img {
+    opacity: 0;
+    margin: 0 25px 20px;
+}
+
+.first .info {
+    width: 772px;
+    height: 49px;
+    margin: 0 auto;
+    background: url("../images/info_1.png");
+}
+
+/*��һ������*/
+.first.current .text > img {
+    opacity: 1;
+    margin: 0 5px 20px;
+    transition: margin 1.2s, opacity 1.2s;
+}
+
+/*�ڶ���*/
+.second {
+    width: 100%;
+}
+
+.second > div {
+    display: flex;
+    flex-direction: row;
+    /*���᷽���µ�*/
+    justify-content: space-around;
+    /*���᷽���µ�*/
+    align-items: center;
+
+}
+
+.second .shield {
+    width: 500px;
+    font-size: 0;
+}
+
+.second .shield > img:nth-of-type(1) {
+    transform: translate(-240px, 300px) rotate(63deg);
+}
+
+.second .shield > img:nth-of-type(2) {
+    transform: translate(-120px, -200px) rotate(-78deg);
+}
+
+.second .shield > img:nth-of-type(3) {
+    transform: translate(60px, -193px) rotate(-23deg);
+}
+
+.second .shield > img:nth-of-type(4) {
+    transform: translate(320px, -450px) rotate(33deg);
+}
+
+.second .shield > img:nth-of-type(5) {
+    transform: translate(-80px, 98px) rotate(-33deg);
+}
+
+.second .shield > img:nth-of-type(6) {
+    transform: translate(-203px, 90px) rotate(11deg);
+}
+
+.second .shield > img:nth-of-type(7) {
+    transform: translate(108px, 228px) rotate(-11deg);
+}
+
+.second .shield > img:nth-of-type(8) {
+    transform: translate(148px, 110px) rotate(-109deg);
+}
+
+.second .shield > img:nth-of-type(9) {
+    transform: translate(490px, 40px) rotate(-360deg);
+}
+
+.second .info {
+    width: 635px;
+    height: 309px;
+    background: url("../images/info_2.png");
+}
+
+/*�ڶ�������*/
+.second.current .shield > img {
+    transition: transform 1.2s;
+    transform: none;
+}
+
+/*������*/
+.third {
+    position: relative;
+}
+
+.third .info {
+    width: 631px;
+    height: 278px;
+    position: absolute;
+    background: url("../images/info_3.png");
+    left: 100px;
+    top: 170px;
+}
+
+.third .ellipse {
+    width: 453px;
+    height: 449px;
+    position: absolute;
+    background: url("../images/circle.png");
+    right: 100px;
+    top: 120px;
+}
+
+.third .ellipse > .rocket {
+    width: 203px;
+    height: 204px;
+    background: url("../images/rocket.png");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-500%, 200%);
+}
+
+/*����������*/
+.third.current .ellipse > .rocket {
+    transition: transform 1.2s;
+    transform: translate(-50%, -50%);
+}
+
+/*������*/
+.fourth {
+    position: relative;
+}
+
+.fourth .search {
+    width: 529px;
+    height: 400px;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    overflow: hidden;
+}
+
+.fourth .info {
+    width: 612px;
+    height: 299px;
+    position: absolute;
+    background: url("../images/info_4.png");
+    right: 100px;
+    top: 170px;
+}
+
+.fourth .search > .box {
+    width: 529px;
+    height: 66px;
+    position: absolute;
+    background: url("../images/search.png");
+    transform: translateX(-100%);
+}
+
+.fourth .search > .text {
+    width: 0px;
+    height: 22px;
+    position: absolute;
+    background: url("../images/key.png");
+    left: 20px;
+    top: 22px;
+}
+
+.fourth .search > .content {
+    width: 529px;
+    height: 0px;
+    position: absolute;
+    background: url("../images/result.png");
+    left: 0;
+    top: 52px;
+}
+
+/*����������*/
+.fourth.current .search > .box {
+    transition: transform 1.2s;
+    transform: translateX(0px);
+}
+
+.fourth.current .search > .text {
+    transition: width 1.2s 1.2s steps(5);
+    width: 99px;
+}
+
+.fourth.current .search > .content {
+    transition: height 1.2s 2.4s;
+    height: 372px;
+}
+
+/*������*/
+.fifth {
+    /**/
+}
+
+.fifth > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fifth .info {
+    width: 100%;
+    height: 134px;
+    margin: 30px 0;
+    background: url("../images/info_5.png") no-repeat center center;
+}
+
+.fifth .content {
+    flex: 1;
+    width: 1004px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.fifth .tool {
+    width: 100%;
+    height: 79px;
+    opacity: 0;
+    background: url("../images/toolbar.png") center top no-repeat;
+}
+
+.fifth .lines {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.fifth .lineleft {
+    width: 1px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.fifth .lineright {
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: translateY(100%);
+}
+
+.fifth .linetop {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+}
+
+.fifth .linebottom {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+}
+
+.fifth .toolbar {
+    position: absolute;
+    top: 32px;
+    left: 70px;
+    /*width: 920px;*/
+    width: 0;
+    overflow: hidden;
+}
+
+.fifth .toolbar p {
+    width: 100%;
+    height: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+.fifth .extra {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 394px;
+    height: 29px;
+    background: url("../images/extra.png");
+    opacity: 0;
+}
+
+.fifth .lineextra {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 30px;
+}
+
+/*����������*/
+.fifth.current .tool {
+    transition: opacity 1.2s;
+    opacity: 1;
+}
+.fifth.current .lineleft,.fifth.current .linebottom ,.fifth.current .lineright ,.fifth.current .linetop {
+    transition: transform 2s ;
+    transform: translate(0);
+}
+/*.fifth.current .linebottom {*/
+    /*transition: transform 1.2s;*/
+    /*transform: translate(0);*/
+/*}*/
+/*.fifth.current .lineright {*/
+    /*transition: transform 1.2s;*/
+    /*transform: translate(0);*/
+/*}*/
+/*.fifth.current .linetop {*/
+    /*transition: transform 1.2s;*/
+    /*transform: translate(0);*/
+/*}*/
+.fifth.current .toolbar {
+    transition: width 1.2s;
+    width: 970px;
+}
+.fifth.current .extra {
+    transition: opacity 1.2s;
+    opacity: 1;
+}
+.sixth .info a {
+    display: block;
+    margin: 200px 468px;
+    font-size: 100px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
